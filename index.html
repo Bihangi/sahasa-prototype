@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sahasa – Smart Vegetable Waste Reduction System</title>
+    <meta
+      name="description"
+      content="Sahasa is a practical decision-support prototype for vegetable wholesalers in Sri Lankan Dedicated Economic Centres."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app-root">
+      <section id="login-screen" class="auth-screen active" aria-label="Login section">
+        <div class="auth-layout">
+          <aside class="auth-brand-panel">
+            <div class="brand-mark" aria-label="Sahasa logo">
+              <span class="brand-icon">
+                <svg viewBox="0 0 64 64" role="img" aria-label="Leaf icon">
+                  <path d="M48 14c-16 1-28 12-31 30 11 4 25 2 34-8 6-7 7-16 5-22-2-1-5-1-8 0z" fill="currentColor" opacity="0.96"/>
+                  <path d="M18 36c8-7 18-10 29-10" stroke="rgba(255,255,255,0.8)" stroke-width="3" stroke-linecap="round" fill="none"/>
+                  <path d="M22 42c7-2 14-3 22-2" stroke="rgba(255,255,255,0.8)" stroke-width="3" stroke-linecap="round" fill="none"/>
+                </svg>
+              </span>
+              <span class="brand-wordmark">Sahasa</span>
+            </div>
+            <h1 data-i18n="loginTitle">Make smarter purchasing decisions with data-driven demand forecasting.</h1>
+            <div class="auth-visual" aria-hidden="true">
+              <div class="veg-circle veg-one"></div>
+              <div class="veg-circle veg-two"></div>
+              <div class="veg-circle veg-three"></div>
+              <div class="veg-line veg-line-one"></div>
+              <div class="veg-line veg-line-two"></div>
+            </div>
+          </aside>
+
+          <main class="auth-panel">
+            <div class="auth-language-toggle" aria-label="Language selector">
+              <button class="lang-toggle-btn active" data-lang="en">English</button>
+              <span class="divider">|</span>
+              <button class="lang-toggle-btn" data-lang="si">සිංහල</button>
+            </div>
+
+            <div class="login-card">
+              <div class="card-kicker" data-i18n="loginKicker">Welcome back</div>
+              <h2 data-i18n="signInTitle">Sign in</h2>
+
+              <label class="field-label" for="username" data-i18n="usernameLabel">Username or email</label>
+              <input id="username" type="text" value="kasun.dec" aria-label="Username or email" />
+
+              <label class="field-label" for="password" data-i18n="passwordLabel">Password</label>
+              <input id="password" type="password" value="demo123" aria-label="Password" />
+
+              <div class="login-row">
+                <label class="check-wrap">
+                  <input type="checkbox" checked />
+                  <span data-i18n="rememberMe">Remember me</span>
+                </label>
+              </div>
+
+              <button id="login-btn" class="primary-btn wide-btn" data-i18n="loginButton">Login</button>
+              <button id="demo-login-btn" class="secondary-btn wide-btn" data-i18n="demoAccount">Demo Account</button>
+            </div>
+          </main>
+        </div>
+      </section>
+
+      <div id="app-shell" class="app-shell hidden" aria-label="Application dashboard shell">
+        <aside class="sidebar">
+          <div class="brand-box">
+            <div class="brand-mark small" aria-label="Sahasa logo">
+              <span class="brand-icon">
+                <svg viewBox="0 0 64 64" role="img" aria-label="Leaf icon">
+                  <path d="M48 14c-16 1-28 12-31 30 11 4 25 2 34-8 6-7 7-16 5-22-2-1-5-1-8 0z" fill="currentColor" opacity="0.96"/>
+                  <path d="M18 36c8-7 18-10 29-10" stroke="rgba(255,255,255,0.8)" stroke-width="3" stroke-linecap="round" fill="none"/>
+                  <path d="M22 42c7-2 14-3 22-2" stroke="rgba(255,255,255,0.8)" stroke-width="3" stroke-linecap="round" fill="none"/>
+                </svg>
+              </span>
+              <div>
+                <div class="brand-wordmark">Sahasa</div>
+                <small data-i18n="tagline">Smart Vegetable Waste Reduction</small>
+              </div>
+            </div>
+          </div>
+
+          <nav class="sidebar-nav" aria-label="Main navigation">
+            <button class="nav-item active" data-page="dashboard">
+              <span class="nav-icon">🏠</span>
+              <span data-i18n="dashboard">Dashboard</span>
+            </button>
+            <button class="nav-item" data-page="inventory">
+              <span class="nav-icon">📦</span>
+              <span data-i18n="inventory">Inventory</span>
+            </button>
+            <button class="nav-item" data-page="sales">
+              <span class="nav-icon">💰</span>
+              <span data-i18n="sales">Sales</span>
+            </button>
+            <button class="nav-item" data-page="forecast">
+              <span class="nav-icon">📈</span>
+              <span data-i18n="forecast">Forecast</span>
+            </button>
+            <button class="nav-item" data-page="recommendations">
+              <span class="nav-icon">💡</span>
+              <span data-i18n="recommendations">Recommendations</span>
+            </button>
+            <button class="nav-item" data-page="waste">
+              <span class="nav-icon">♻️</span>
+              <span data-i18n="waste">Waste</span>
+            </button>
+            <button class="nav-item" data-page="reports">
+              <span class="nav-icon">📄</span>
+              <span data-i18n="reports">Reports</span>
+            </button>
+            <button class="nav-item" data-page="settings">
+              <span class="nav-icon">⚙️</span>
+              <span data-i18n="settings">Settings</span>
+            </button>
+          </nav>
+
+          <div class="sidebar-footer">
+            <div class="prototype-box">
+              <strong data-i18n="prototypeVersion">Prototype Version 0.1</strong>
+              <span data-i18n="prototypeNote">Decision-support prototype for academic research.</span>
+            </div>
+          </div>
+        </aside>
+
+        <div class="content-panel">
+          <header class="topbar">
+            <div class="welcome-area">
+              <h1 id="welcome-heading">Good morning, Kasun 👋</h1>
+              <p id="centre-name">Katugasthota DEC</p>
+            </div>
+
+            <div class="topbar-actions">
+              <div class="date-tag" id="header-date">05 September 2026</div>
+
+              <div class="notification-wrapper">
+                <button id="notification-toggle" class="icon-btn" aria-label="Notifications" aria-haspopup="true" aria-expanded="false">
+                  🔔
+                  <span id="notification-badge" class="notif-badge">3</span>
+                </button>
+                <div id="notification-panel" class="notification-panel hidden" role="dialog" aria-label="Notifications"></div>
+              </div>
+
+              <div class="lang-toggle" aria-label="Language toggle">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="si">සිං</button>
+              </div>
+            </div>
+          </header>
+
+          <main id="page-content" aria-live="polite"></main>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-root" aria-live="polite"></div>
+    <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+    <script src="js/data.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
